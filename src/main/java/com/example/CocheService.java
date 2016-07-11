@@ -20,7 +20,7 @@ private CocheRepository cocheRepository;
         coche.setModelo("GT-15");
         coche.setAñoFab(1998);
         coche.setPrecio(150000);
-        coche.setMatricula("1234567-Y");
+        coche.setMatriculaNumero("1234ENG");
 
         cocheRepository.save(coche);
 
@@ -29,7 +29,7 @@ private CocheRepository cocheRepository;
         coche2.setModelo("Megane");
         coche2.setAñoFab(2009);
         coche2.setPrecio(20000);
-        coche2.setMatricula("456897-M");
+        coche2.setMatriculaNumero("4567MAD");
 
         cocheRepository.save(coche2);
 
@@ -38,7 +38,7 @@ private CocheRepository cocheRepository;
         coche3.setModelo("TX-50");
         coche3.setAñoFab(1997);
         coche3.setPrecio(50000);
-        coche3.setMatricula("678325-B");
+        coche3.setMatriculaNumero("9908BAC");
 
         cocheRepository.save(coche3);
 
@@ -48,7 +48,7 @@ private CocheRepository cocheRepository;
         coche4.setModelo("Turbo-100");
         coche4.setAñoFab(2009);
         coche4.setPrecio(400000);
-        coche4.setMatricula("378897-P");
+        coche4.setMatriculaNumero("3456ING");
 
         cocheRepository.save(coche4);
 
@@ -78,7 +78,8 @@ private CocheRepository cocheRepository;
         System.out.println("Los Renault de marca Megane que valen 20.000 es:");
         System.out.println(cocheRepository.findByMarcaAndModeloAndPrecioLessThanEqual("Renault","Megane",20000));
 
-
+        System.out.println("Matricula 3456ING ");
+        System.out.println(cocheRepository.findByMatriculaNumero("3456ING"));
 
 
 

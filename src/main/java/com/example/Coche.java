@@ -18,17 +18,18 @@ public class Coche {
     private String modelo;
     private Integer añoFab;
     private Integer precio;
-    private String matricula;
+    private String matriculaNumero;
 
-    public Coche(String marca, String modelo, Integer añoFab, Integer precio, String matricula) {
+    public Coche(String marca, String modelo, Integer añoFab, Integer precio, String matriculaNumero) {
         this.marca = marca;
         this.modelo = modelo;
         this.añoFab = añoFab;
         this.precio = precio;
-        this.matricula = matricula;
+        this.matriculaNumero = matriculaNumero;
     }
 
     public Coche() {
+
     }
 
     public Long getId() {
@@ -71,12 +72,12 @@ public class Coche {
         this.precio = precio;
     }
 
-    public String getMatricula() {
-        return matricula;
+    public String getMatriculaNumero() {
+        return matriculaNumero;
     }
 
-    public void setMatricula(String matricula) {
-        this.matricula = matricula;
+    public void setMatriculaNumero(String matriculaNumero) {
+        this.matriculaNumero = matriculaNumero;
     }
 
     @Override
@@ -87,34 +88,35 @@ public class Coche {
                 ", modelo='" + modelo + '\'' +
                 ", añoFab=" + añoFab +
                 ", precio=" + precio +
-                ", matricula='" + matricula + '\'' +
+                ", matriculaNumero='" + matriculaNumero + '\'' +
                 '}';
     }
 
     @Override
     public boolean equals(Object o) {
+
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
         Coche coche = (Coche) o;
 
-        if (getId() != null ? !getId().equals(coche.getId()) : coche.getId() != null) return false;
-        if (getMarca() != null ? !getMarca().equals(coche.getMarca()) : coche.getMarca() != null) return false;
-        if (getModelo() != null ? !getModelo().equals(coche.getModelo()) : coche.getModelo() != null) return false;
-        if (getAñoFab() != null ? !getAñoFab().equals(coche.getAñoFab()) : coche.getAñoFab() != null) return false;
-        if (getPrecio() != null ? !getPrecio().equals(coche.getPrecio()) : coche.getPrecio() != null) return false;
-        return getMatricula() != null ? getMatricula().equals(coche.getMatricula()) : coche.getMatricula() == null;
+        if (id != null ? !id.equals(coche.id) : coche.id != null) return false;
+        if (marca != null ? !marca.equals(coche.marca) : coche.marca != null) return false;
+        if (modelo != null ? !modelo.equals(coche.modelo) : coche.modelo != null) return false;
+        if (añoFab != null ? !añoFab.equals(coche.añoFab) : coche.añoFab != null) return false;
+        if (precio != null ? !precio.equals(coche.precio) : coche.precio != null) return false;
+        return matriculaNumero != null ? matriculaNumero.equals(coche.matriculaNumero) : coche.matriculaNumero == null;
 
     }
 
     @Override
     public int hashCode() {
-        int result = getId() != null ? getId().hashCode() : 0;
-        result = 31 * result + (getMarca() != null ? getMarca().hashCode() : 0);
-        result = 31 * result + (getModelo() != null ? getModelo().hashCode() : 0);
-        result = 31 * result + (getAñoFab() != null ? getAñoFab().hashCode() : 0);
-        result = 31 * result + (getPrecio() != null ? getPrecio().hashCode() : 0);
-        result = 31 * result + (getMatricula() != null ? getMatricula().hashCode() : 0);
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (marca != null ? marca.hashCode() : 0);
+        result = 31 * result + (modelo != null ? modelo.hashCode() : 0);
+        result = 31 * result + (añoFab != null ? añoFab.hashCode() : 0);
+        result = 31 * result + (precio != null ? precio.hashCode() : 0);
+        result = 31 * result + (matriculaNumero != null ? matriculaNumero.hashCode() : 0);
         return result;
     }
 }

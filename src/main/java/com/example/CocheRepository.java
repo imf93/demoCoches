@@ -15,10 +15,13 @@ import java.util.List;
    List<Coche>findByAñoFabGreaterThanEqual(Integer añofab );
     List<Coche>findByAñoFabLessThanEqual(Integer añofab );
     List<Coche>findByAñoFabBetween(Integer añofab,Integer añofab2 );
-    List<Coche>findByPrecioGreaterThanEqual(Integer precio );
-    List<Coche>findByPrecioLessThanEqual(Integer precio);
+
+    // List<Coche>findByPrecioGreaterThanEqual(Integer precio );
+    //List<Coche>findByPrecioLessThanEqual(Integer precio);
     List<Coche>findByMarcaAndModelo(String marca,String modelo);
     List<Coche>findByMarcaAndPrecio(String marca,Integer precio);
+
+    Coche findByMatriculaNumero(String matriculaNumero);
     List<Coche>findByMarcaAndPrecioLessThanEqual(String marca,Integer precio);
    List<Coche>findByMarcaAndModeloAndPrecioLessThanEqual(String marca,String modelo,Integer precio);
     }
