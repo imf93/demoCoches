@@ -16,8 +16,9 @@ import java.util.List;
     List<Coche>findByAñoFabLessThanEqual(Integer añofab );
     List<Coche>findByAñoFabBetween(Integer añofab,Integer añofab2 );
 
-    // List<Coche>findByPrecioGreaterThanEqual(Integer precio );
-    //List<Coche>findByPrecioLessThanEqual(Integer precio);
+    List<Coche> findByPrecioGreaterThanEqual(Integer precio);
+
+    List<Coche> findByPrecioLessThanEqual(Integer precio);
     List<Coche>findByMarcaAndModelo(String marca,String modelo);
     List<Coche>findByMarcaAndPrecio(String marca,Integer precio);
 

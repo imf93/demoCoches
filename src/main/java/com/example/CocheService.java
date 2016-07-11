@@ -78,6 +78,11 @@ private CocheRepository cocheRepository;
         System.out.println("Los Renault de marca Megane que valen 20.000 es:");
         System.out.println(cocheRepository.findByMarcaAndModeloAndPrecioLessThanEqual("Renault","Megane",20000));
 
+        System.out.println("Los coches con precio inferior a 20.000 son:");
+        System.out.println(cocheRepository.findByPrecioLessThanEqual(20000));
+
+
+
         System.out.println("Matricula 3456ING ");
         System.out.println(cocheRepository.findByMatriculaNumero("3456ING"));
 
