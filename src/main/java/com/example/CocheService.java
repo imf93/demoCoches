@@ -64,6 +64,7 @@ public class CocheService {
         coche4.setModelo("Turbo-100");
         coche4.setAñoFab(2009);
         coche4.setPrecio(400000.00);
+        coche3.setPropietario(ivan);
         coche4.setMatriculaNumero("3456ING");
 
         cocheRepository.save(coche4);
@@ -106,6 +107,9 @@ public class CocheService {
 
         System.out.println("Los coches de ivan son: ");
         System.out.println(cocheRepository.obtenerCochePersona(ivan));
+
+        System.out.println("Los ferraris de ivan mayor a 150000 son");
+        System.out.println(cocheRepository.obtenerCochePersonaPrecio(ivan, 20000.00));
 
 
     }
