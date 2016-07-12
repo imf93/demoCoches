@@ -19,7 +19,7 @@ private CocheRepository cocheRepository;
         coche.setMarca("Ferrari");
         coche.setModelo("GT-15");
         coche.setAñoFab(1998);
-        coche.setPrecio(150000);
+        coche.setPrecio(150000.88);
         coche.setMatriculaNumero("1234ENG");
 
         cocheRepository.save(coche);
@@ -28,7 +28,7 @@ private CocheRepository cocheRepository;
         coche2.setMarca("Renault");
         coche2.setModelo("Megane");
         coche2.setAñoFab(2009);
-        coche2.setPrecio(20000);
+        coche2.setPrecio(20000.70);
         coche2.setMatriculaNumero("4567MAD");
 
         cocheRepository.save(coche2);
@@ -37,7 +37,7 @@ private CocheRepository cocheRepository;
         coche3.setMarca("Renault");
         coche3.setModelo("TX-50");
         coche3.setAñoFab(1997);
-        coche3.setPrecio(50000);
+        coche3.setPrecio(53500.23);
         coche3.setMatriculaNumero("9908BAC");
 
         cocheRepository.save(coche3);
@@ -47,7 +47,7 @@ private CocheRepository cocheRepository;
         coche4.setMarca("Ferrari");
         coche4.setModelo("Turbo-100");
         coche4.setAñoFab(2009);
-        coche4.setPrecio(400000);
+        coche4.setPrecio(400000.00);
         coche4.setMatriculaNumero("3456ING");
 
         cocheRepository.save(coche4);
@@ -66,20 +66,20 @@ private CocheRepository cocheRepository;
         System.out.println(cocheRepository.findByMarcaAndModelo("Ferrari","Turbo-100"));
 
         System.out.println("Los ferraris que valen 200000 es :");
-        System.out.println(cocheRepository.findByMarcaAndPrecio("Ferrari",230000));
+        System.out.println(cocheRepository.findByMarcaAndPrecio("Ferrari", 230000.00));
 
         System.out.println("Los ferraris que valen de 150000 son :");
-        System.out.println(cocheRepository.findByMarcaAndPrecio("Ferrari",150000));
+        System.out.println(cocheRepository.findByMarcaAndPrecio("Ferrari", 150000.00));
 
         System.out.println("Los ferraris que valen menos de 200000:");
-        System.out.println(cocheRepository.findByMarcaAndPrecioLessThanEqual("Ferrari",200000));
+        System.out.println(cocheRepository.findByMarcaAndPrecioLessThanEqual("Ferrari", 200000.00));
 
 
         System.out.println("Los Renault de marca Megane que valen 20.000 es:");
-        System.out.println(cocheRepository.findByMarcaAndModeloAndPrecioLessThanEqual("Renault","Megane",20000));
+        System.out.println(cocheRepository.findByMarcaAndModeloAndPrecioLessThanEqual("Renault", "Megane", 20000.00));
 
         System.out.println("Los coches con precio inferior a 20.000 son:");
-        System.out.println(cocheRepository.findByPrecioLessThanEqual(20000));
+        System.out.println(cocheRepository.findByPrecioLessThanEqual(20000.00));
 
 
 

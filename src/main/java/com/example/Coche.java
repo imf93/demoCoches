@@ -17,10 +17,10 @@ public class Coche {
     private String marca;
     private String modelo;
     private Integer añoFab;
-    private Integer precio;
+    private Double precio;
     private String matriculaNumero;
 
-    public Coche(String marca, String modelo, Integer añoFab, Integer precio, String matriculaNumero) {
+    public Coche(String marca, String modelo, Integer añoFab, Double precio, String matriculaNumero) {
         this.marca = marca;
         this.modelo = modelo;
         this.añoFab = añoFab;
@@ -64,11 +64,11 @@ public class Coche {
         this.añoFab = añoFab;
     }
 
-    public Integer getPrecio() {
+    public Double getPrecio() {
         return precio;
     }
 
-    public void setPrecio(Integer precio) {
+    public void setPrecio(Double precio) {
         this.precio = precio;
     }
 

@@ -20,15 +20,18 @@ import java.util.List;
 
     List<Coche> findByPrecioGreaterThanEqual(Integer precio);
 
-    List<Coche> findByPrecioLessThanEqual(Integer precio);
+    List<Coche> findByPrecioLessThanEqual(Double precio);
     List<Coche>findByMarcaAndModelo(String marca,String modelo);
-    List<Coche>findByMarcaAndPrecio(String marca,Integer precio);
+
+    List<Coche> findByMarcaAndPrecio(String marca, Double precio);
 
     Coche findByMatriculaNumero(String matriculaNumero);
-    List<Coche>findByMarcaAndPrecioLessThanEqual(String marca,Integer precio);
-   List<Coche>findByMarcaAndModeloAndPrecioLessThanEqual(String marca,String modelo,Integer precio);
 
-    @Query("SELECT AVG (c.precio) from Coche c where c.marca = :marca")
+    List<Coche> findByMarcaAndPrecioLessThanEqual(String marca, Double precio);
+
+    List<Coche> findByMarcaAndModeloAndPrecioLessThanEqual(String marca, String modelo, Double precio);
+
+    @Query("SELECT AVG (coche.precio) from Coche coche where coche.marca = :marca")
     Double obtenerMediaPorMarca(@Param("marca") String marca);
     }
 
