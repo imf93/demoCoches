@@ -33,5 +33,8 @@ import java.util.List;
 
     @Query("SELECT AVG (coche.precio) from Coche coche where coche.marca = :marca")
     Double obtenerMediaPorMarca(@Param("marca") String marca);
+
+ @Query("SELECT coche FROM Coche coche WHERE coche.propietario=:propietario")
+ List<Persona> obtenerCochePersona(@Param("propietario") Persona propietario);
     }
 
