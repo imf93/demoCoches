@@ -34,7 +34,7 @@ private CocheRepository cocheRepository;
         cocheRepository.save(coche2);
 
         Coche coche3 = new Coche();
-        coche3.setMarca("Mercedes");
+        coche3.setMarca("Renault");
         coche3.setModelo("TX-50");
         coche3.setAñoFab(1997);
         coche3.setPrecio(50000);
@@ -85,6 +85,10 @@ private CocheRepository cocheRepository;
 
         System.out.println("Matricula 3456ING ");
         System.out.println(cocheRepository.findByMatriculaNumero("3456ING"));
+
+        System.out.println("La media de los coches Renault es: ");
+        System.out.println(cocheRepository.obtenerMediaPorMarca("Renault"));
+
 
 
 

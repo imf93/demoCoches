@@ -1,6 +1,8 @@
 package com.example;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
@@ -25,5 +27,8 @@ import java.util.List;
     Coche findByMatriculaNumero(String matriculaNumero);
     List<Coche>findByMarcaAndPrecioLessThanEqual(String marca,Integer precio);
    List<Coche>findByMarcaAndModeloAndPrecioLessThanEqual(String marca,String modelo,Integer precio);
+
+    @Query("SELECT AVG (c.precio) from Coche c where c.marca = :marca")
+    Double obtenerMediaPorMarca(@Param("marca") String marca);
     }
 
