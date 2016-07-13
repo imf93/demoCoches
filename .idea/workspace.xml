@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cfd3573e-4d86-4090-b7cb-1c7efcd620c2" name="Default" comment="He añadido una query para que me muestre los coches de una persona determinada indicando su nombre y que su precio sea superior a un valor dado.">
+    <list default="true" id="cfd3573e-4d86-4090-b7cb-1c7efcd620c2" name="Default" comment="He añadido las cosnultas de rango añoFab, coches de las personas que tengan mas de una edad y rango de edad de las personas que tengan coche.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/Coche.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/Coche.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/CocheRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/CocheRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/CocheService.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/CocheService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/PersonaService.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/PersonaService.java" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -58,7 +54,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/CocheRepository.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="660">
-              <caret line="49" column="35" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
+              <caret line="50" column="35" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -78,7 +74,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/CocheService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2780">
-              <caret line="121" column="73" selection-start-line="121" selection-start-column="73" selection-end-line="121" selection-end-column="73" />
+              <caret line="121" column="74" selection-start-line="121" selection-start-column="74" selection-end-line="121" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -127,7 +123,7 @@
       <file leaf-file-name="PersonaService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/PersonaService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
+            <state relative-caret-position="-649">
               <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
               <folding />
             </state>
@@ -683,7 +679,7 @@
       <option name="presentableId" value="Default" />
       <updated>1468307514014</updated>
       <workItem from="1468307515861" duration="12699000" />
-      <workItem from="1468393324402" duration="5473000" />
+      <workItem from="1468393324402" duration="6151000" />
     </task>
     <task id="LOCAL-00001" summary="Hemos añadido la sentencia para obtener la media de una marca determinada.">
       <created>1468309513724</created>
@@ -713,11 +709,18 @@
       <option name="project" value="LOCAL" />
       <updated>1468324956789</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="He añadido las cosnultas de rango añoFab, coches de las personas que tengan mas de una edad y rango de edad de las personas que tengan coche.">
+      <created>1468398885552</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1468398885552</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18172000" />
+    <option name="totallyTimeSpent" value="18850000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -742,7 +745,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -779,7 +782,8 @@
     <MESSAGE value="Hemos añadido la sentencia para obtener la media de una marca determinada. Hemos cambiado el precio de Integer a Double." />
     <MESSAGE value="He añadido una query para que me muestre los coches de una persona determinada indicando su nombre." />
     <MESSAGE value="He añadido una query para que me muestre los coches de una persona determinada indicando su nombre y que su precio sea superior a un valor dado." />
-    <option name="LAST_COMMIT_MESSAGE" value="He añadido una query para que me muestre los coches de una persona determinada indicando su nombre y que su precio sea superior a un valor dado." />
+    <MESSAGE value="He añadido las cosnultas de rango añoFab, coches de las personas que tengan mas de una edad y rango de edad de las personas que tengan coche." />
+    <option name="LAST_COMMIT_MESSAGE" value="He añadido las cosnultas de rango añoFab, coches de las personas que tengan mas de una edad y rango de edad de las personas que tengan coche." />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -966,7 +970,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/CocheRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
-          <caret line="49" column="35" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
+          <caret line="50" column="35" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -974,14 +978,14 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/CocheService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2780">
-          <caret line="121" column="73" selection-start-line="121" selection-start-column="73" selection-end-line="121" selection-end-column="73" />
+          <caret line="121" column="74" selection-start-line="121" selection-start-column="74" selection-end-line="121" selection-end-column="74" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/PersonaService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
+        <state relative-caret-position="-649">
           <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
           <folding />
         </state>
