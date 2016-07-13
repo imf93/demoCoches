@@ -35,20 +35,29 @@ import java.util.List;
     Double obtenerMediaPorMarca(@Param("marca") String marca);
 
  @Query("SELECT coche FROM Coche coche WHERE coche.propietario =:propietario")
- List<Persona> obtenerCochePersona(@Param("propietario") Persona propietario);
+ List<Coche> obtenerCochePersona(@Param("propietario") Persona propietario);
 
 
  @Query("SELECT coche FROM Coche coche WHERE coche.propietario =:propietario and coche.precio>:precio")
- List<Persona> obtenerCochePersonaPrecio(@Param("propietario") Persona propietario, @Param("precio") Double precio);
+ List<Coche> obtenerCochePersonaPrecio(@Param("propietario") Persona propietario, @Param("precio") Double precio);
 
  @Query("SELECT coche FROM Coche coche WHERE coche.propietario =:propietario and coche.precio>:precio and  coche.añoFab  BETWEEN :año1 AND :año2 ")
- List<Persona> obtenerCochePersonaPrecioAño(@Param("propietario") Persona propietario, @Param("precio") Double precio, @Param("año1") Integer año1, @Param("año2") Integer año2);
+ List<Coche> obtenerCochePersonaPrecioAño(@Param("propietario") Persona propietario, @Param("precio") Double precio, @Param("año1") Integer año1, @Param("año2") Integer año2);
 
  @Query("SELECT coche FROM Coche coche WHERE coche.propietario.edad<:edad")
- List<Persona> obtenerCochePorEdad(@Param("edad") Integer edad);
+ List<Coche> obtenerCochePorEdad(@Param("edad") Integer edad);
+
 
  @Query("SELECT coche FROM Coche coche WHERE coche.propietario.edad between  :edad and :edad1")
- List<Persona> obtenerCochePorRangoEdad(@Param("edad") Integer edad, @Param("edad1") Integer edad1);
+ List<Coche> obtenerCochePorRangoEdad(@Param("edad") Integer edad, @Param("edad1") Integer edad1);
+
+ @Query("SELECT coche from Coche coche where coche.matriculaNumero LIKE(CONCAT('%', :letras,'%'))")
+ List<Coche> obtenerMatriculaByLetras(@Param("letras") String letras);
+
+ @Query("SELECT (coche.marca), AVG(coche.precio), MIN (coche.precio), MAX (coche.precio) from Coche coche GROUP BY marca")
+ List<Object[]> obtenerMidMinMax();
+
+
 
 
     }

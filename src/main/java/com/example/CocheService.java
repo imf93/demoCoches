@@ -3,6 +3,8 @@ package com.example;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by professor on 11/07/2016.
  */
@@ -120,6 +122,21 @@ public class CocheService {
         System.out.println(cocheRepository.obtenerCochePorEdad(21));
         System.out.println("Los coches de las personas que tienen ente 20 y 23  años son:");
         System.out.println(cocheRepository.obtenerCochePorRangoEdad(25, 30));
+
+
+        System.out.println("Coches que tienen como matricula  que contienen las letras ING son:");
+        System.out.println(cocheRepository.obtenerMatriculaByLetras("ING"));
+
+
+        System.out.println("Mostrar la media, el minimo y el máximo, del precio de los vehículos de cada marca");
+        List<Object[]> marcaList = cocheRepository.obtenerMidMinMax();
+        for (Object[] marca : marcaList) {
+            System.out.println("Marca: " + marca[0] + " ");
+            System.out.println("Media: " + marca[1] + " ");
+            System.out.println("Media: " + marca[2] + " ");
+            System.out.println("Media: " + marca[3] + " ");
+        }
+
 
 
     }
