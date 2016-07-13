@@ -14,18 +14,19 @@ public class PersonaService {
     public void testPersonas() {
         Persona persona = new Persona();
         persona.setNombre("Ivan");
-        persona.setEdad(23);
+        persona.setEdad(20);
         personaRepository.save(persona);
 
-        Persona persona2 = new Persona();
-        persona2.setNombre("Dimple");
-        personaRepository.save(persona2);
-        persona2.setEdad(25);
+        //Persona persona2 = new Persona();
+        // persona2.setNombre("Dimple");
+        //personaRepository.save(persona2);
+        //persona2.setEdad(80);
+
         Persona persona3 = new Persona();
 
         persona3.setNombre("Noelia");
         persona3.setApellido("Villa");
-        persona3.setEdad(25);
+        persona3.setEdad(30);
         personaRepository.save(persona3);
 
         Persona persona4 = new Persona();
@@ -40,7 +41,7 @@ public class PersonaService {
         Persona persona5 = new Persona();
         persona5.setNombre("Ricard");
         persona5.setApellido("Hernandez");
-        persona5.setEdad(22);
+        persona5.setEdad(50);
         personaRepository.save(persona5);
 
         System.out.println(personaRepository.findOne(2L));

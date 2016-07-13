@@ -38,7 +38,7 @@ public class CocheService {
         Coche coche2 = new Coche();
         coche2.setMarca("Renault");
         coche2.setModelo("Megane");
-        coche2.setAñoFab(2009);
+        coche2.setAñoFab(2004);
         coche2.setPrecio(20000.70);
         coche2.setMatriculaNumero("4567MAD");
 
@@ -64,8 +64,11 @@ public class CocheService {
         coche4.setModelo("Turbo-100");
         coche4.setAñoFab(2009);
         coche4.setPrecio(400000.00);
-        coche3.setPropietario(ivan);
+
         coche4.setMatriculaNumero("3456ING");
+        Persona noelia = personaRepository.findOne(2L);
+        coche4.setPropietario(noelia);
+
 
         cocheRepository.save(coche4);
 
@@ -110,6 +113,13 @@ public class CocheService {
 
         System.out.println("Los ferraris de ivan mayor a 150000 son");
         System.out.println(cocheRepository.obtenerCochePersonaPrecio(ivan, 20000.00));
+
+        System.out.println("Los ferraris de ivan mayor a 150000 y entre el 1995-2008 son :");
+        System.out.println(cocheRepository.obtenerCochePersonaPrecioAño(ivan, 20000.00, 2003, 2005));
+        System.out.println("Los coches de las personas que tienen menos de 21 años son:");
+        System.out.println(cocheRepository.obtenerCochePorEdad(21));
+        System.out.println("Los coches de las personas que tienen ente 20 y 23  años son:");
+        System.out.println(cocheRepository.obtenerCochePorRangoEdad(25, 30));
 
 
     }

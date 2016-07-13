@@ -16,7 +16,7 @@ public class Coche {
     private Integer añoFab;
     private Double precio;
     private String matriculaNumero;
-    @ManyToOne //Para decir que coche puede pertenecer a una persona
+    @ManyToOne //Para decir que  coches puede pertenecer solo a una persona
     private Persona propietario;
 
 

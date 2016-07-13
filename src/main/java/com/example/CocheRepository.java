@@ -41,6 +41,15 @@ import java.util.List;
  @Query("SELECT coche FROM Coche coche WHERE coche.propietario =:propietario and coche.precio>:precio")
  List<Persona> obtenerCochePersonaPrecio(@Param("propietario") Persona propietario, @Param("precio") Double precio);
 
+ @Query("SELECT coche FROM Coche coche WHERE coche.propietario =:propietario and coche.precio>:precio and  coche.añoFab  BETWEEN :año1 AND :año2 ")
+ List<Persona> obtenerCochePersonaPrecioAño(@Param("propietario") Persona propietario, @Param("precio") Double precio, @Param("año1") Integer año1, @Param("año2") Integer año2);
+
+ @Query("SELECT coche FROM Coche coche WHERE coche.propietario.edad<:edad")
+ List<Persona> obtenerCochePorEdad(@Param("edad") Integer edad);
+
+ @Query("SELECT coche FROM Coche coche WHERE coche.propietario.edad between  :edad and :edad1")
+ List<Persona> obtenerCochePorRangoEdad(@Param("edad") Integer edad, @Param("edad1") Integer edad1);
+
 
     }
 
