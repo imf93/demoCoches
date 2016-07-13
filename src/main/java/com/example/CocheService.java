@@ -133,8 +133,8 @@ public class CocheService {
         for (Object[] marca : marcaList) {
             System.out.println("Marca: " + marca[0] + " ");
             System.out.println("Media: " + marca[1] + " ");
-            System.out.println("Media: " + marca[2] + " ");
-            System.out.println("Media: " + marca[3] + " ");
+            System.out.println("Max: " + marca[2] + " ");
+            System.out.println("Min: " + marca[3] + " ");
         }
 
 
