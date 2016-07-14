@@ -31,6 +31,8 @@ import java.util.List;
 
     List<Coche> findByMarcaAndModeloAndPrecioLessThanEqual(String marca, String modelo, Double precio);
 
+ List<Coche> findByAñoFab(Integer añoFab);
+
     @Query("SELECT AVG (coche.precio) from Coche coche where coche.marca = :marca")
     Double obtenerMediaPorMarca(@Param("marca") String marca);
 

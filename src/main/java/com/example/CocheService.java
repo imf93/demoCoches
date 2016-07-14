@@ -142,9 +142,11 @@ public class CocheService {
         List<Object[]> añoList = cocheRepository.ObtenerCocheAñoFab();
 
         for (Object[] añoFab : añoList) {
-
+            Integer año = (Integer) añoFab[0];
             System.out.println("Año: " + añoFab[0]);
             System.out.println("Cantidad " + añoFab[1] + System.lineSeparator());
+            System.out.println("Listado coches" + cocheRepository.findByAñoFab(año));
+
             System.out.println("-----------------------------------------------------------------");
         }
 
