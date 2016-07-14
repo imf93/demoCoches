@@ -57,8 +57,7 @@ import java.util.List;
  @Query("SELECT (coche.marca), AVG(coche.precio), MIN (coche.precio), MAX (coche.precio) from Coche coche GROUP BY marca")
  List<Object[]> obtenerMidMinMax();
 
-
-
-
+ @Query("SELECT coche.añoFab, COUNT(coche) FROM Coche coche group BY añoFab")
+ List<Object[]> ObtenerCocheAñoFab();
     }
 

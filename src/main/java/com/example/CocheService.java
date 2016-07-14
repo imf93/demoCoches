@@ -1,5 +1,6 @@
 package com.example;
 
+import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -64,7 +65,7 @@ public class CocheService {
         Coche coche4 = new Coche();
         coche4.setMarca("Ferrari");
         coche4.setModelo("Turbo-100");
-        coche4.setAñoFab(2009);
+        coche4.setAñoFab(2004);
         coche4.setPrecio(400000.00);
 
         coche4.setMatriculaNumero("3456ING");
@@ -135,6 +136,16 @@ public class CocheService {
             System.out.println("Media: " + marca[1] + " ");
             System.out.println("Max: " + marca[2] + " ");
             System.out.println("Min: " + marca[3] + " ");
+        }
+
+        System.out.println("Coches por año de fabricacion");
+        List<Object[]> añoList = cocheRepository.ObtenerCocheAñoFab();
+
+        for (Object[] añoFab : añoList) {
+
+            System.out.println("Año: " + añoFab[0]);
+            System.out.println("Cantidad " + añoFab[1] + System.lineSeparator());
+            System.out.println("-----------------------------------------------------------------");
         }
 
 
