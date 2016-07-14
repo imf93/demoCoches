@@ -142,9 +142,11 @@ public class CocheService {
         List<Object[]> añoList = cocheRepository.ObtenerCocheAñoFab();
 
         for (Object[] añoFab : añoList) {
+            //Para pasarle despues el año ponemos el cast de integer año
             Integer año = (Integer) añoFab[0];
             System.out.println("Año: " + añoFab[0]);
             System.out.println("Cantidad " + añoFab[1] + System.lineSeparator());
+            //Hemos puesto en cocheRepositury la consulta find y solo le pasamos el año para que te muestre los cohes de dicho año
             System.out.println("Listado coches" + cocheRepository.findByAñoFab(año));
 
             System.out.println("-----------------------------------------------------------------");
